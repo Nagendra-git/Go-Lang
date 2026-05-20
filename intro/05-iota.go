@@ -4,9 +4,25 @@ import "fmt"
 
 func main() {
 
-	const red int = 0
+	/*const red int = 0
 	const green int = 1
 	const blue int = 2
 
 	fmt.Printf("red = %d, green =%d and blue = %d\n", red, green, blue)
+	*/
+
+	const (
+		red = (iota * 2) + 1
+		green
+		blue
+	)
+	fmt.Printf("red = %d , green = %d, blue = %d\n", red, green, blue)
+
+	const (
+		x = 1 << iota
+		w
+		r
+	)
+
+	fmt.Printf("%b, %b, %b\n", r, w, x)
 }
