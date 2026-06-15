@@ -8,11 +8,12 @@ func ptf(a *int) {
 
 func main() {
 
-	var x = 100
+	//var x = 100
+	x := 100
 	fmt.Printf("The value of x before function call is: %d\n", x)
 
-	var pa *int = &x
-
+	//var pa *int = &x
+	pa := &x
 	ptf(pa)
 	fmt.Printf("The value of x after function call is: %d\n", x)
 
