@@ -7,4 +7,6 @@ type IInventory interface {
 	GetCount() int
 	GetByIndex(idx int) *models.Product
 	GetProducts() []*models.Product
+	GetValue() float64
+	SortByCost()
 }
