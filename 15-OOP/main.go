@@ -40,8 +40,12 @@ LOOP:
 		case 4:
 			commands.QueryProducts()
 			continue LOOP
-		case 5: 
+		case 5:
 			commands.QueryInventoryValue()
+			continue LOOP
+		case 6:
+			commands.SortProductsByCost()
+			continue LOOP
 		case 7:
 			break LOOP
 		}

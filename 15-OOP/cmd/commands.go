@@ -54,9 +54,9 @@ func (commands *Commands) QuaryByIndex() error {
 	return nil
 }
 
-func (commands *Commands) QueryProducts(){
-	if products := commands.inventry.GetProducts(); len(products) !=0{
-		for _, p := range products{
+func (commands *Commands) QueryProducts() {
+	if products := commands.inventry.GetProducts(); len(products) != 0 {
+		for _, p := range products {
 			fmt.Println(p)
 		}
 		return
@@ -64,6 +64,12 @@ func (commands *Commands) QueryProducts(){
 	fmt.Println("Noo products Found!")
 }
 
-func (commands *Commands) QueryInventoryValue(){
-	
+func (commands *Commands) QueryInventoryValue() {
+	invValue := commands.inventry.GetValue()
+	fmt.Printf("Inventory value : %02.f\n", invValue)
+}
+
+func (commands *Commands) SortProductsByCost() {
+	commands.inventry.SortByCost()
+	commands.QueryProducts()
 }
