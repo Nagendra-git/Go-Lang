@@ -32,6 +32,16 @@ LOOP:
 		case 2:
 			commands.QueryCount()
 			continue LOOP
+		case 3:
+			if err := commands.QuaryByIndex(); err != nil {
+				fmt.Println(err)
+			}
+			continue LOOP
+		case 4:
+			commands.QueryProducts()
+			continue LOOP
+		case 5: 
+			commands.QueryInventoryValue()
 		case 7:
 			break LOOP
 		}
